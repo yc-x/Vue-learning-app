@@ -1,33 +1,21 @@
 <template>
     <the-header :title="title"></the-header>
-    <stored-resources :resources="storedResources"></stored-resources>
+    <!-- <stored-resources :resources="storedResources"></stored-resources> -->
+    <the-resource></the-resource>
 </template>
 
 <script>
-import StoredResources from './components/LearningResource/StoredResources.vue';
+// import StoredResources from './components/LearningResource/StoredResources.vue';
 import TheHeader from './components/layout/TheHeader.vue';
+import TheResource from './components/LearningResource/TheResource.vue';
 
 export default {
     components: {
-        StoredResources, TheHeader
+        TheHeader, TheResource
     },
     data(){
         return {
             title: 'title!!',
-            storedResources: [
-                {
-                    id: '0',
-                    title: 'Official Guide',
-                    description: 'The official documentation.',
-                    link: 'https://vuejs.org',
-                },
-                {
-                    id: '1',
-                    title: 'Google',
-                    description: 'Go to Google!',
-                    link: 'https://google.com',
-                }
-            ]
         };
     }
 }
