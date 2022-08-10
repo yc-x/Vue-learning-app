@@ -1,6 +1,8 @@
 <template>
+<teleport to="body">
     <div @click="$emit('close')"></div>
     <!-- Somehow this div for grabbing ::backdrop does not work? -->
+    <!-- actually the above div is not appearing? -->
     <dialog open>
         <header>
             <slot name="header">
@@ -17,6 +19,7 @@
             </slot>
         </menu>
     </dialog>
+</teleport>
 </template>
 
 <script>
